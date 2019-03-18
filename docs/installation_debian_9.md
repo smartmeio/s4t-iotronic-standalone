@@ -1,6 +1,6 @@
 # Stack4Things IoTronic (standalone version) installation guide for Debian 9
 
-We tested this procedure on a Ubuntu 16.04 (within a LXD container also). Everything needs to be run as root.
+We tested this procedure on a Debain 9 (within a LXD container also). Everything needs to be run as root.
 
 ## Install requirements
 
