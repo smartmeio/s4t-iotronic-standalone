@@ -4,11 +4,20 @@ Iotronic-standalone v2.3.7
     - Added 'maintenance' state for device
     - Fixed bug: "extra info field: when it is not in JSON format"
     - Added "state_time" attribute in "boards" DB table
-    - New API to force device connection status
+    - Added APIs:
+      - force device connection status
     
 - Plugin Manager:
-    - Added "autostart" attribute in "plugins_injected" DB table
-    - Fixed bug in getChecksum()
+    - Added attributes in "plugins" DB table:
+      - packaging
+      - iotronic_dep
+    - Added attributes in "plugins_injected" DB table:
+      - autostart
+      - on_maintenance
+    - Fixed bug in getChecksum() function
+    - Added APIs:
+      - Inject plugins.json into device (batch version too)
+      - Get plugins.json for the device
 
 
 
@@ -17,4 +26,5 @@ alter table `boards` add column `state_time` TIMESTAMP NULL DEFAULT CURRENT_TIME
 alter table `plugins_injected` add column `autostart` VARCHAR(45) NULL DEFAULT 'false';
 alter table `plugins_injected` add column `on_maintenance` VARCHAR(45) NULL DEFAULT 'false';
 alter table `plugins` add column `iotronic_dep` VARCHAR(45) NULL DEFAULT 'false';
+alter table `plugins` add column `packaging` VARCHAR(45) NULL DEFAULT 'single';
 ```
