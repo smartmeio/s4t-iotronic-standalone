@@ -5,7 +5,9 @@ Iotronic-standalone v2.3.7
     - Fixed bug: "extra info field: when it is not in JSON format"
     - Added "state_time" attribute in "boards" DB table
     - Added APIs:
+      - change device state (single and batch)
       - force device connection status
+    - Improved update device info: Iotronic will inject all settings.json updated file
     
 - Plugin Manager:
     - Added attributes in "plugins" DB table:
@@ -16,7 +18,7 @@ Iotronic-standalone v2.3.7
       - on_maintenance
     - Fixed bug in getChecksum() function
     - Added APIs:
-      - Inject plugins.json into device (batch version too)
+      - Inject plugins.json into device (single and batch)
       - Get plugins.json for the device
 
 
